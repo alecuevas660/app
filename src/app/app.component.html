@@ -31,6 +31,12 @@
           Historial de viajes
         </ion-item> 
       </ion-list>
+      <ion-list>
+        <ion-item  detail routerLink="/historial" (click)="cerrarMenu()" (click)="signOut()" >
+          <ion-icon slot="start" name="arrow-back-circle-outline"></ion-icon>
+          Cerrar sesión
+        </ion-item> 
+      </ion-list>
     </ion-content>
   </ion-menu>
 

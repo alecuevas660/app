@@ -1,8 +1,19 @@
 <app-header  title="Perfil"></app-header>
 
 <ion-content [fullscreen]="true">
-
-  <div class="perfil">
-    <ion-image src="assets/icon/logotellevoapp.png"></ion-image>
+  <div class="container">
+    <ion-img class="perfil" src="assets/icon/perfil.png"></ion-img>
+  
+    <h1 class="user">Usuario</h1>
+    <ion-item button detail>
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>Editar Perfil</ion-label>
+    </ion-item>
+    <ion-item button detail>
+      <ion-icon name="document-text-outline"></ion-icon>
+      <ion-label>Detalles cuenta</ion-label>
+    </ion-item>
   </div>
+  
+
 </ion-content>
