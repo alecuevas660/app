@@ -19,6 +19,18 @@
           Iniciar sesión
         </ion-item> 
       </ion-list>
+      <ion-list>
+        <ion-item  detail routerLink="/perfil" (click)="cerrarMenu()">
+          <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+          Perfil
+        </ion-item> 
+      </ion-list>
+      <ion-list>
+        <ion-item  detail routerLink="/historial" (click)="cerrarMenu()">
+          <ion-icon slot="start" name="clipboard-outline"></ion-icon>
+          Historial de viajes
+        </ion-item> 
+      </ion-list>
     </ion-content>
   </ion-menu>
 
