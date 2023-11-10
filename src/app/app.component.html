@@ -7,7 +7,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list>
+      <ion-list *ngIf="user().rol == 'cliente' ">
         <ion-item  detail routerLink="/home" (click)="cerrarMenu()">
           <ion-icon slot="start" name="home-outline"></ion-icon>
           Inicio

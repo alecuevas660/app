@@ -53,12 +53,12 @@ export class UtilsService {
   }
 
 
-  
+ 
 
 //=================CAMARA====================
 
  async takePicture (promptLabelHeader:string) {
-  return await Camera.getPhoto({
+  return await  Camera.getPhoto({
     quality: 90,
     allowEditing: true,
     resultType: CameraResultType.Uri,

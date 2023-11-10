@@ -21,16 +21,37 @@ export class PerfilPage implements OnInit {
   
   }
 
-  //async takeimage(){
-   // let user = this.user()
-    //const dataUrl =(await this.utilsvc.takePicture('Foto de perfil')).dataUrl
+  async takeimage(){
+   let user = this.user()
+   let path = `users/${user.uid}`
+   console.log(path)
+    const dataUrl =(await this.utilsvc.takePicture('Foto de perfil')).dataUrl
+    console.log("error 1")
+    let imagePath= `${user.uid}/perfil`
+    console.log(dataUrl)
+    console.log("error 1.5")
 
-    //let imagePath =`${user.id}/perfil`
-    //user.image = await this.firebase.uploadImage(imagePath, dataUrl)
+  
+    user.imagen  = await this.firebase.uploadImage(imagePath, dataUrl)
+  
+    
+    console.log("error 2")
+  
+    this.firebase.updateDocument(path,  {imagen: user.imagen}).then(async res=>{
+    this.utilsvc.saveInLocalStorage('user',user)
+    console.log("error 3")
+    }).catch(error => {
+      console.log(error)
+      this.utilsvc.presentToast({
+        message: error.message,
+        duration: 2500,
+        color: 'primary',
+        position: "middle",
+        icon: 'alert-circle-outline'
+      })
 
-    //this.firebase.uploadDoc(this.formulario.value as User).then(res=>{
-    //}
-  //}
+    })
+  }
 
   ngOnInit() {
   }

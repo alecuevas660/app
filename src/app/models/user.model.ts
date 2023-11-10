@@ -1,8 +1,10 @@
+import { UploadResult } from "firebase/storage";
+
 export interface User {
-    image: void;
-    uid: any;
-    id: string;
+    uid: string;
     email: string;
     password: string;
     name: string;
+    imagen: string | UploadResult
+    rol: string;
 }

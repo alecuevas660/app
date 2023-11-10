@@ -2,9 +2,11 @@
 
 <ion-content [fullscreen]="true">
   <div class="container">
-    <ion-img class="perfil" src="assets/icon/perfil.png"></ion-img>
-  
-    <h1 class="user">Usuario</h1>
+    <ion-avatar class="perfil" ><img class="perfil" [src]="user()?.imagen"></ion-avatar>
+    
+    <ion-img class="perfil" [src]="user()?.imagen"></ion-img>
+    <ion-button (click)="takeimage()" expand="block" fill="clear" shape="round" >Tomar foto</ion-button>
+    <h1 class="user">{{user().name}}</h1>
     <ion-item button detail>
       <ion-icon name="person-circle-outline"></ion-icon>
       <ion-label>Editar Perfil</ion-label>

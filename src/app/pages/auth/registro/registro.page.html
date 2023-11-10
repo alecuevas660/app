@@ -52,6 +52,20 @@
  
              </div>
 
+
+            
+             <!--------ROL------->
+             <label for="rol">Selecciona el uso que darás a la app</label>
+             <select [formControl]="formulario.controls.rol" name="rol" id="rol" >
+               <option value="" autofocus>Selecciona una opción</option>
+               <option value="cliente">Cliente</option>
+               <option value="trabajador">Trabajador</option>
+             </select>
+
+
+
+ 
+
              <ion-button  type="submit" color="danger" expand="full">Registrar</ion-button>
                 
             </form>   
